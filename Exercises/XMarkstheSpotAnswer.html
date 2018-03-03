@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <style>
+      .filled {
+        background-color: black;
+      }
+      td {
+        border: solid black 1px;
+        width: 120px;
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="grid">
+    </table>
+  <script>
+    var size = 249;
+    var table = document.getElementById("grid");
+    for (x = 0; x < size; x++) {
+      var row = table.insertRow(x);
+      for (y = 0; y <size; y++) {
+        var cell = row.insertCell(y);
+        if (y==x) {
+          cell.className = "filled";
+        }
+        if (x+y==size-1) {
+          cell.className = "filled";
+        }
+      }
+    }
+  </script>
+  </body>
+</html>
