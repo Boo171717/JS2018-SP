@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+<h2>Homework 1- (I don't know exactly what to call it)</h2>
+<p>This will hopefully work.</p>
+<p id="stuff"></p>
+
+<script>
+  function hi(ar) {
+    var a = "";
+    var b = ar.length;
+    var c = ar[0].length;
+    for (w=0; w < b; w++) {
+      for (x=0; x < c; x++ ) {
+        a += ar[w][x];
+      }
+      a = a + "";
+    }
+    document.getElementById("stuff").innerHTML = a
+  }
+  hi([["I", "P", "F", "T", "A"],
+      ["", "R", "A", "H", "S"],
+      ["", "O", "I", "I", "S"],
+      ["", "B", "L", "S", "I"],
+      ["", "A", "E", "", "G"],
+      ["", "B", "D", "", "N"],
+      ["", "L", "", "", "M"],
+      ["", "Y", "", "", "E"],
+      ["", "", "", "", "N"],
+      ["", "", "", "", "T"]
+    ])
+</script>
+
+</body>
+<html>
