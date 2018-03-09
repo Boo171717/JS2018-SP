@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Homework 1- (I don't know exactly what to call it)</h2>
+<p>This will hopefully work.</p>
+<p id="stuff"></p>
+
+<script>
+var array1 = ["I", "H", "F", "T", "A"];
+var array2 = [",", "A", "A", "H", "S"];
+var array3 = [",", "V", "I", "I", "S"];
+var array4 = [",", "E", "L", "S", "I"];
+var array5 = [",", ",", "E", ",", "G"];
+var array6 = [",", ",", "D", ",", "N"];
+var array7 = [",", ",", ",", ",", "M"];
+var array8 = [",", ",", ",", ",", "E"];
+var array9 = [",", ",", ",", ",", "N"];
+var array10 = [",", ",", ",", ",", "T"];
+//var combinedArray = array1 + array2 + array3 + array4 + array5 + array6 + array7 + array8 + array9 + array10;
+var firstWord = document.getElementById("stuff").innerHTML = array1[0] + array2[0] + array3[0] + array4[0] + array5[0] + array6[0] + array7[0] + array8[0] + array9[0] + array10[0];
+var secondWord = document.getElementById("stuff").innerHTML = array1[1] + array2[1] + array3[1] + array4[1] + array5[1] + array6[1] + array7[1] + array8[1] + array9[1] + array10[1];
+var thirdWord = document.getElementById("stuff").innerHTML = array1[2] + array2[2] + array3[2] + array4[2] + array5[2] + array6[2] + array7[2] + array8[2] + array9[2] + array10[2];
+var fourthWord = document.getElementById("stuff").innerHTML = array1[3] + array2[3] + array3[3] + array4[3] + array5[3] + array6[3] + array7[3] + array8[3] + array9[3] + array10[3];
+var fifthWord = document.getElementById("stuff").innerHTML = array1[4] + array2[4] + array3[4] + array4[4] + array5[4] + array6[4] + array7[4] + array8[4] + array9[4] + array10[4];
+function theSentence() {
+  var Sentence= firstWord + secondWord + thirdWord + fourthWord + fifthWord;
+  return Sentence;
+  console.log("Hi");
+}
+theSentence();
+</script>
+
+</body>
+</html>
