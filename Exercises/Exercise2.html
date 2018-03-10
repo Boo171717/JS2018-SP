@@ -1,0 +1,19 @@
+<html>
+  <body>
+    Binary Number 1: <input id="textbox0" name="BinaryNumber1" value= "Write Here"><br>
+    Binary Number 2: <input id="textbox1" name="BinaryNumber2" value= "Write Here"><br>
+    <button type="button" onclick="combineBinaryNumbers()">CLICK ME ALREADY!</button>
+    <script>
+      function combineBinaryNumbers() {
+        var hi = document.getElementById('textbox0').value;
+        var hi1 = document.getElementById('textbox1').value;
+        var refinedHi = parseInt(hi, 2);
+        var refinedHi1 = parseInt(hi1, 2);
+        var sum = refinedHi + refinedHi1;
+        var oops = 0;
+        var blank = '';
+        console.log(sum.toString(2));
+      }
+    </script>
+  </body>
+</html>
