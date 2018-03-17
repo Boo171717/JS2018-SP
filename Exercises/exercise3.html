@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script>
+    function pascal(n) {
+      var result = [[1]];
+      for (var r = 1; r < n; r++) {
+        result.push([]);
+        for (var c = 0; c <= r; c++) {
+          if (c == 0 || c == r) {
+            result[r][c] = 1;
+          } else {
+            result[r][c] = result[r-1][c] + result[r-1][c-1];
+          }
+        }
+      }
+    console.log(result);
+    for (var i = 0; i < result.length; i++) {
+      document.write(result[i]+"<br>");
+    }
+  }
+    pascal(10);
+    </script>
+  </body>
+</html>
