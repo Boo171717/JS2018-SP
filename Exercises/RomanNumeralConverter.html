@@ -1,0 +1,40 @@
+<html>
+  <body>
+    <script>
+      function RomanNumeral(number) {
+        var result ='';
+        var arabicNumeral = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+        var roman = ["M", "CM","D","CD","C", "XC", "L", "XL", "X","IX","V","IV","I"];
+        for (var i = 0; i<=arabicNumeral.length; i++) {
+          //this loops over every element in the arrays
+          while (number%arabicNumeral[i]<number) {
+            //will keep trying the same number until it needs to move on to a smaller number
+            result += roman[i];
+            //add the correct Roman numeral to the result string"
+            number -= arabicNumeral[i];
+            //this will subtract the Arabic numeral value of the Roman numeral  from the number
+          }
+        }
+        return result;
+      }
+      function ArabicNumeral(string) {
+        var result = 0;
+        //the result is a number now, not a string
+        var arabicNumeral = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+        var roman = ["M", "CM","D","CD","C", "XC", "L", "XL", "X","IX","V","IV","I"];
+        for (var i = 0; i<=arabicNumeral.length; i++) {
+          while (string.indexOf(roman[i]) === 0) {
+            //checking for the first characters of the string
+            result += arabicNumeral[i];
+            //adding the Arabic Numeral value to the result number
+            string = string.replace(roman[i], '');
+            //removes the hopefully matched Roman numeral from the beginning
+          }
+        }
+        return result;
+      }
+      console.log(RomanNumeral(1999));
+      console.log(ArabicNumeral("MCML"));
+    </script>
+  </body>
+</html>
