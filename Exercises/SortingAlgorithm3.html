@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <script>
+      function sortingAlgorithm(array) {
+        for (var i = 1; i < array.length; i++) {
+          if (array[i] < array[0]) {
+            array.unshift(array.splice(i,1)[0]); //this hopefully will move the current element to the first position, meaning that it is less than the element that it was compared to
+          }
+          else if (array[i] > array[i-1]) {
+            //nothing happens because it just leaves the elements in the same position as before
+            continue; //continues with the next iteration of the loop- the else statement
+          }
+          else {
+            //the algorithm needs to find where the element should go
+            for (var z = 1; z < i; z++) {
+              if (array[i] > array[z-1] && array[i] < array[z]) {
+                //hopefully moves the element to somewhere else
+                  array.splice(z, 0, array.splice(i,1)[0]);
+                }
+              }
+            }
+          }
+          return array;
+        }
+        console.log(sortingAlgorithm([1293084023840, -8895345934875, 1293048120395820395, 90123485, 75892357])); //:) MY THIRD ATTEMPT WORKS
+    </script>
+  </body>
+</html>
