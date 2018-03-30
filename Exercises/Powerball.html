@@ -1,0 +1,51 @@
+<html>
+  <body>
+    <script>
+      /*var powerball = [];
+      for (var i = 0; i < 4; i++) {
+        powerball.push((Math.floor(Math.random())*70));
+      }
+      powerball.push((Math.floor(Math.random())*35));
+
+      alert(powerball[0]); This doesn't work :(*/
+      function getRandomNumbers(abc) {
+  if (!(abc instanceof Array)) return false;
+  var abcv=[];
+  for (var i=0,m=abc.length;i<m;i++)
+    abcv.push(Math.floor((Math.random()*abc[i]) +1));
+  return abcv;
+}
+
+function getPowerballNumbers() {
+  return getRandomNumbers([69,69,69,69,69,26]);
+}
+
+var powerballNumbers = getPowerballNumbers();
+console.log(powerballNumbers);
+
+function personPowerballNumbers() {
+  return getRandomNumbers([69, 69, 69, 69, 69, 26]);
+}
+var theirPowerballNumbers = personPowerballNumbers();
+alert(theirPowerballNumbers);
+if (theirPowerballNumbers[0] = powerballNumbers[0]) {
+  alert("You get 4 dollars!");
+}
+if (theirPowerballNumbers[1] = powerballNumbers[1]) {
+  alert("You get 4 dollars!");
+}
+if (theirPowerballNumbers[2] = powerballNumbers[2]) {
+  alert("You get 4 dollars!");
+}
+if (theirPowerballNumbers[3] = powerballNumbers[3]) {
+  alert("You get 4 dollars!");
+}
+if (theirPowerballNumbers[4] = powerballNumbers[4]) {
+  alert("You get 4 dollars!");
+}
+//for (var i = 0; i < theirPowerballNumbers.length || i < powerballNumbers.length; i++) {} I know I should use this but how... 
+// how to do this in a much easier and better fashion as this is very time-consuming:()
+// the code is going awry because it thinks that 69 is equal to 69, which is true, but I am trying to get the index, not the criteria
+    </script>
+  </body>
+</html>
